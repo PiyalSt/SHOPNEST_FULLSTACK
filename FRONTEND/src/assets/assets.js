@@ -1,9 +1,18 @@
 
+import bkash from "./bkash_logo.png";
+import rocket from "./rocket_logo.png";
+import nagad from "./nagad_logo.png";
+
+const assets = {
+  bkash,
+  rocket,
+  nagad,
+}
+
+export default assets;
 
 
-
-
-const demoProducts = [
+export const demoProducts = [
   {
     id: 1,
     name: "iPhone 15 Pro",
@@ -325,4 +334,3 @@ const demoProducts = [
   },
 ];
 
-export default demoProducts;
