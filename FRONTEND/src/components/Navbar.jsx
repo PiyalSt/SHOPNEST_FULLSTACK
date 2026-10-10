@@ -16,7 +16,7 @@ const Navbar = () => {
           type="text"
           placeholder="Search"
         />
-        <BiSearch className="text-xl cursor-pointer active:scale-95" />
+        <BiSearch className="text-xl text-slate-800 cursor-pointer active:scale-95" />
       </div>
       <div className="hidden md:flex items-center gap-4">
         <div className="flex items-center gap-2 cursor-pointer active:scale-95 text-slate-800 hover:text-blue-400 transition-all duration-200">

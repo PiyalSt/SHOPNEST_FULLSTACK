@@ -2,11 +2,25 @@
 import bkash from "./bkash_logo.png";
 import rocket from "./rocket_logo.png";
 import nagad from "./nagad_logo.png";
+import fashion from "./fashion.jpg";
+import fashion01 from "./fashion_01.jpg";
+import electronics from './electronics.jpg'
+import accessories from './accessories.jpg'
+import lifestyle from './lifestyle.jpg'
+import headphones from './headphones.png'
+import categories_banner from './categories_banner.jpg'
 
 const assets = {
   bkash,
   rocket,
   nagad,
+  fashion,
+  fashion01,
+  electronics,
+  accessories,
+  lifestyle,
+  headphones,
+  categories_banner,
 }
 
 export default assets;

@@ -1,12 +1,20 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import { BrowserRouter, Route, Routes } from 'react-router'
+import RootLayout from './layouts/RootLayout'
+import Home from './pages/Home'
+import Categories from './pages/Categories'
 
 const App = () => {
   return (
-    <div className='w-full min-h-screen bg-blue-100/50'>
-      <Navbar />
-      <Footer />
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<RootLayout />}>
+            <Route index element={<Home />} />
+            <Route path='/categories' element={<Categories />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
