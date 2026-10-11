@@ -1,14 +1,15 @@
 import React from "react";
 import { BiCart, BiMenu, BiSearch, BiUser } from "react-icons/bi";
 import { HiOutlineHeart } from "react-icons/hi";
+import { Link } from "react-router";
 
 const Navbar = () => {
   return (
     <div className="w-full flex items-center justify-between bg-white py-4 px-10">
       <div>
-        <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl text-slate-800">
+        <Link to={'/'} className="font-semibold text-2xl sm:text-3xl md:text-4xl text-slate-800">
           SHOPNEST
-        </h2>
+        </Link>
       </div>
       <div className="w-[40%] hidden md:flex items-center bg-slate-200/80 gap-2 py-2 px-4 rounded-md">
         <input
@@ -28,12 +29,12 @@ const Navbar = () => {
           </div>
           <p className="text-sm  font-medium">Wishlist</p>
         </div>
-        <div className="flex items-center relative cursor-pointer active:scale-95 transition-all duration-200">
+        <Link to={'/cartpage'} className="flex items-center relative cursor-pointer active:scale-95 transition-all duration-200">
           <BiCart className="text-2xl text-slate-800 hover:text-blue-400" />
           <div className="absolute -top-2 -right-2 w-4 h-4 rounded-full bg-blue-400 text-white flex items-center justify-center text-xs">
             4
           </div>
-        </div>
+        </Link>
         <div>
           <BiUser className="text-xl text-slate-800 hover:text-blue-400 cursor-pointer transition-colors duration-200 active:scale-95" />
         </div>

@@ -38,7 +38,7 @@ const Home = () => {
         </div>
         <Category />
       </div>
-      <div>
+      <div id="shop">
         <div className="px-10 py-10 flex gap-2">
           <div>
             <div className="w-2 h-full bg-blue-400 rounded-full"></div>

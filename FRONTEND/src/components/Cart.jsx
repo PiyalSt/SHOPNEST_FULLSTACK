@@ -1,16 +1,26 @@
 import React from "react";
 import assets from "../assets/assets";
-import { FaStar } from "react-icons/fa6";
+import { FaRegHeart, FaStar } from "react-icons/fa6";
+import { LuEye } from "react-icons/lu";
+import { Link } from "react-router";
 
 const Cart = ({ productName, price, thumbnail, discountPrice }) => {
   return (
     <div className="w-full border-2 border-slate-400 rounded-2xl">
-      <div className="bg-slate-200/50 w-full h-80">
+      <div className="bg-slate-200/50 w-full h-80 relative">
         <img
           className="w-full h-full object-cover"
           src={thumbnail}
           alt=""
         />
+        <div className="absolute top-4 right-4 space-y-2">
+          <Link to={'/product/01'} className="w-8 h-8 bg-blue-200/50 rounded-full flex items-center justify-center cursor-pointer">
+            <LuEye />
+          </Link>
+          <Link to={'/'} className="w-8 h-8 bg-blue-200/50 rounded-full flex items-center justify-center cursor-pointer">
+            <FaRegHeart />
+          </Link>
+        </div>
       </div>
       <div className="m-4 space-y-2">
         <h4 className="text-xl font-semibold text-slate-800">
