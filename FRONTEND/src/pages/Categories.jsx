@@ -39,10 +39,10 @@ const Categories = () => {
                 <div className="w-2 h-2 rounded-full bg-blue-50"></div>
                 EXPLORE OUR COLLECTION
               </p>
-              <h2 className="text-6xl font-bold text-white">
+              <h2 className="text-2xl md:text-6xl font-bold text-white">
                 Find Your Perfect Style.
               </h2>
-              <p className="text-xl text-blue-100">
+              <p className="hidden md:inline text-xl text-blue-100">
                 Discover products made for your lifestyle, all in one place.
               </p>
             </div>
@@ -122,8 +122,8 @@ const Categories = () => {
               </select>
             </div>
           </div>
-          <div className="flex mt-10">
-            <div className="w-3/12 h-full py-5 space-y-3 border-r-2 border-blue-200">
+          <div className="flex flex-col md:flex-row mt-10">
+            <div className="w-full md:w-3/12 h-full py-5 space-y-3 md:border-r-2 border-blue-200">
               <div className="w-full flex flex-col ml-10">
                 <h2 className="text-lg text-slate-800 font-bold pb-2">
                   Categories
@@ -199,9 +199,9 @@ const Categories = () => {
                 </button>
               </div>
             </div>
-            <div className="w-9/12 py-5">
-              <div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-10 pb-12">
+            <div className="w-full md:w-9/12 py-5">
+              <div className="w-full">
+                <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:px-10 pb-12">
                   {products.map((item) => (
                     <Cart
                       key={item.id}
@@ -213,7 +213,7 @@ const Categories = () => {
                   ))}
                 </div>
               </div>
-              <div>
+              <div className="px-4 mb-10">
                 <div className="w-full flex justify-center">
                   <div className="flex gap-2">
                     <button className="py-2 px-4 border-2 border-blue-200 text-slate-800 font-medium text-sm rounded-md active:scale-95 transition-all duration-200 cursor-pointer">Previous</button>
