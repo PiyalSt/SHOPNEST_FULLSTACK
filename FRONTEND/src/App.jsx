@@ -8,10 +8,17 @@ import Cartpage from './pages/Cartpage'
 import Admin from './pages/Admin'
 import AdminLayout from './layouts/AdminLayout'
 import CreateProduct from './pages/CreateProduct'
+import Register from './pages/Register'
+import Login from './pages/Login'
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   return (
     <div>
+      {/* Toaster */}
+      <Toaster />
+
+      {/* Routes */}
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<RootLayout />}>
@@ -25,7 +32,8 @@ const App = () => {
               <Route path='createproducts' element={<CreateProduct />} />
             </Route>
           </Route>
-          
+          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
       </BrowserRouter>
     </div>
