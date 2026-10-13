@@ -5,6 +5,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { FcGoogle } from "react-icons/fc";
 import toast from "react-hot-toast";
 import { Link } from "react-router";
+import axios from 'axios'
 
 const Register = () => {
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -20,7 +21,7 @@ const Register = () => {
   const [confirmPasswordError, setConfirmPasswordError] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const handleSignup = () => {
+  const handleSignup = async () => {
     if (!username) {
       toast.error("Please enter your full name!");
       setUsernameError(true);
@@ -52,7 +53,19 @@ const Register = () => {
       return;
     }
 
-    toast.success("Registration successfully complete.");
+    try {
+      const res = await axios.post(
+        "http://localhost:4000/api/shopnest/v1/users",
+        {
+          username,
+          email,
+          password: confirmPassword,
+        },
+      );
+      toast.success("Registration successfully complete.");
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
 
   return (
@@ -188,7 +201,10 @@ const Register = () => {
                 </button>
                 <p className="text-sm text-center">
                   Already have an account?{" "}
-                  <Link to={'/login'} className="text-blue-400 cursor-pointer hover:underline">
+                  <Link
+                    to={"/login"}
+                    className="text-blue-400 cursor-pointer hover:underline"
+                  >
                     Login
                   </Link>
                 </p>

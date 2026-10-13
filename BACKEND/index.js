@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const connect_db = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
+const cors = require('cors');
 
 dotenv.config();
 const app = express();
@@ -11,6 +12,7 @@ const port = process.env.PORT || 3000;
 // connect mongodb
 connect_db();
 
+app.use(cors());
 app.use(express.json());
 
 // routes

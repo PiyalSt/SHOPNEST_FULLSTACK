@@ -2,6 +2,6 @@ const express = require("express");
 
 const router = express.Router();
 
-router.post('/', createProdct);
+// router.post('/', createProdct);
 
 module.exports = router;

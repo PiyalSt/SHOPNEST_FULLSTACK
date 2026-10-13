@@ -1,13 +1,36 @@
 import React from "react";
+import { useRef } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { BiCart, BiMenu, BiSearch, BiUser } from "react-icons/bi";
 import { HiOutlineHeart } from "react-icons/hi";
 import { Link } from "react-router";
 
 const Navbar = () => {
+  const menuRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
+
   return (
     <div className="w-full flex items-center justify-between bg-white py-4 px-10">
       <div>
-        <Link to={'/'} className="font-semibold text-2xl sm:text-3xl md:text-4xl text-slate-800">
+        <Link
+          to={"/"}
+          className="font-semibold text-2xl sm:text-3xl md:text-4xl text-slate-800"
+        >
           SHOPNEST
         </Link>
       </div>
@@ -29,14 +52,34 @@ const Navbar = () => {
           </div>
           <p className="text-sm  font-medium">Wishlist</p>
         </div>
-        <Link to={'/cartpage'} className="flex items-center relative cursor-pointer active:scale-95 transition-all duration-200">
+        <Link
+          to={"/cartpage"}
+          className="flex items-center relative cursor-pointer active:scale-95 transition-all duration-200"
+        >
           <BiCart className="text-2xl text-slate-800 hover:text-blue-400" />
           <div className="absolute -top-2 -right-2 w-4 h-4 rounded-full bg-blue-400 text-white flex items-center justify-center text-xs">
             4
           </div>
         </Link>
-        <div>
-          <BiUser className="text-xl text-slate-800 hover:text-blue-400 cursor-pointer transition-colors duration-200 active:scale-95" />
+        <div ref={menuRef} className="relative">
+          <BiUser
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-xl text-slate-800 hover:text-blue-400 cursor-pointer transition-colors duration-200 active:scale-95"
+          />
+
+          {isOpen && (
+            <div className="w-60 absolute top-8 right-0 bg-blue-100 rounded-md py-4 px-4 space-y-2">
+              <div className="text-center py-2 hover:bg-blue-50 hover:shadow rounded-md cursor-pointer font-medium text-slate-800 active:scale-95 transition-all duration-200">
+                Profile
+              </div>
+              <div className="text-center py-2 hover:bg-blue-50 hover:shadow rounded-md cursor-pointer font-medium text-slate-800 active:scale-95 transition-all duration-200">
+                Setting
+              </div>
+              <div className="text-center py-2 hover:bg-blue-50 hover:shadow rounded-md cursor-pointer font-medium text-slate-800 active:scale-95 transition-all duration-200">
+                Sign In
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
