@@ -79,33 +79,14 @@ const ProductDetails = () => {
           </div>
 
           <div className="w-full md:w-7/12 py-5 space-y-2 px-10">
-            <h2 className="text-2xl text-slate-800 font-bold">
+            <h2 className="text-3xl text-slate-800 font-bold">
               Premium Wireless Noise _ Cancelling Headphones
             </h2>
-            <p className="font-medium text-slate-600">AcausticTech</p>
-            <div className="flex items-center gap-1">
-              <div className="flex text-amber-400">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </div>
-              <div className="text-slate-900 font-medium">(4.5)</div>
-              <div className="text-slate-800">( 124 Reviews )</div>
-            </div>
             <div className="flex items-center gap-2">
-              <p className="text-3xl font-bold text-slate-800">$436.00</p>
-              <p className="text-lg text-slate-700">
-                Old Price: $
-                <span className="line-through text-red-400">844.00</span>
-              </p>
-              <div className="py-2 px-4 rounded-2xl bg-blue-400/80 font-bold text-slate-800">
-                30%
-              </div>
+              <p className="text-2xl font-bold text-slate-800">$436.00</p>
             </div>
             <div>
-              <p className="text-base font-medium text-slate-800">
+              <p className="text-sm font-medium text-slate-700">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Eveniet suscipit ex quod ratione ab eum, animi hic
                 necessitatibus id dolorum sequi quia, facere, recusandae beatae
@@ -113,36 +94,32 @@ const ProductDetails = () => {
               </p>
             </div>
             <div>
-              <h4 className="text-lg font-medium">Product Option</h4>
+              <h4 className="text-base font-medium">Product Option</h4>
               <div className="flex gap-4 mt-2">
-                <p className="text-base font-medium">Color: </p>
+                <p className="text-sm font-medium">Color: </p>
                 <div className="flex gap-4">
                   <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded-full bg-green-400 border-2 border-white outline-2 outline-slate-800"></div>
-                    <p>Mattle Black</p>
+                    <div className="w-4 h-4 rounded-full bg-green-400 border-2 border-white outline-2 outline-slate-400"></div>
+                    <p className="text-sm">Mattle Black</p>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded-full bg-blue-400 border-2 border-white outline-2 outline-slate-800"></div>
-                    <p>Mattle Blue</p>
+                    <div className="w-4 h-4 rounded-full bg-blue-400 border-2 border-white outline-2 outline-slate-400"></div>
+                    <p className="text-sm">Mattle Blue</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="text-base font-medium">
-              Size: <span className="font-normal">N/A</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <p className="text-base font-bold">Quiantity: </p>
+            <div className="flex items-center gap-2 text-base font-medium">
+              Size: 
+              {/* <span className="font-normal">N/A</span> */}
               <div className="flex gap-2">
-                <div className="w-8 h-8 rounded-md border-2 border-blue-200 text-blue-400 flex items-center justify-center active:scale-95 transition-all duration-200 cursor-pointer">
-                  <BiPlus size={20} />
-                </div>
-                <div className="text-base text-blue-400 w-8 h-8 flex items-center justify-center border-2 border-blue-200 rounded-md">
-                  1
-                </div>
-                <div className="w-8 h-8 rounded-md border-2 border-blue-200 text-blue-400 flex items-center justify-center active:scale-95 transition-all duration-200 cursor-pointer">
-                  <BiMinus size={20} />
-                </div>
+                <button className="py-1.5 px-4 bg-slate-800 text-slate-50 rounded-md hover:bg-transparent border-2 border-transparent hover:border-slate-800 hover:text-slate-800 cursor-pointer transition-all duration-200 active:scale-95">XL</button>
+              </div>
+            </div>
+            <div>
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 rounded-full bg-green-400 outline-2 outline-green-400/80 border-2 border-white"></div>
+                <p className="text-base font-medium text-slate-700">432 in stock</p>
               </div>
             </div>
             <div className="w-full flex flex-col gap-2 mt-10">

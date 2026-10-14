@@ -4,6 +4,9 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { BiBox, BiCart } from "react-icons/bi";
 import { CiCoins1 } from "react-icons/ci";
+import { TbShoppingBagEdit } from "react-icons/tb";
+import { MdOutlineDeleteSweep } from "react-icons/md";
+
 
 const Admin = () => {
   const [products, setProducts] = useState([]);
@@ -85,10 +88,10 @@ const Admin = () => {
             </div>
             <div className="space-x-2">
               <button className="py-2 px-4 rounded-md bg-blue-600 text-blue-100 cursor-pointer active:scale-95 transition-all duration-200">
-                Edit
+                <TbShoppingBagEdit size={20} />
               </button>
               <button className="py-2 px-4 rounded-md bg-red-500 text-blue-100 cursor-pointer active:scale-95 transition-all duration-200">
-                Delete
+                <MdOutlineDeleteSweep size={20} />
               </button>
             </div>
           </div>

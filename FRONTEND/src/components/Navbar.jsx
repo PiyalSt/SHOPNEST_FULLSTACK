@@ -72,11 +72,11 @@ const Navbar = () => {
               <div className="text-center py-2 hover:bg-blue-50 hover:shadow rounded-md cursor-pointer font-medium text-slate-800 active:scale-95 transition-all duration-200">
                 Profile
               </div>
-              <div  className="text-center py-2 hover:bg-blue-50 hover:shadow rounded-md cursor-pointer font-medium text-slate-800 active:scale-95 transition-all duration-200">
-              <Link to={'/admin'} >
-                Admin
+              <Link to={"/admin"}>
+                <div className="text-center py-2 hover:bg-blue-50 hover:shadow rounded-md cursor-pointer font-medium text-slate-800 active:scale-95 transition-all duration-200">
+                  Admin
+                </div>
               </Link>
-              </div>
               <div className="text-center py-2 hover:bg-blue-50 hover:shadow rounded-md cursor-pointer font-medium text-slate-800 active:scale-95 transition-all duration-200">
                 Sign In
               </div>

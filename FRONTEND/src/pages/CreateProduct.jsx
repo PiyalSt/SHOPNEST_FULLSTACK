@@ -2,7 +2,7 @@ import React from "react";
 
 const CreateProduct = () => {
 
-  
+
 
   return (
     <div className="px-10">
@@ -58,7 +58,7 @@ const CreateProduct = () => {
         </div>
         <div className="flex gap-10">
           <div className="w-full space-y-2">
-            <h4 className="text-blue-50">Description</h4>
+            <h4 className="text-blue-50">Images Upload</h4>
             <input
               className="w-full py-2 px-4 border-2 border-blue-200/50 rounded-md outline-0 text-blue-50"
               type="file"

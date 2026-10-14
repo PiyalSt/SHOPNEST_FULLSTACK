@@ -26,12 +26,12 @@ const App = () => {
             <Route path="/categories" element={<Categories />} />
             <Route path="/cartpage" element={<Cartpage />} />
             <Route path="/product/:id" element={<ProductDetails />} />
+          </Route>
 
             <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<Admin />} />
               <Route path="createproducts" element={<CreateProduct />} />
             </Route>
-          </Route>
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
         </Routes>
