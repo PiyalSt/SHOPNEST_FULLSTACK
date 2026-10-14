@@ -1,6 +1,9 @@
 import React from "react";
 
 const CreateProduct = () => {
+
+  
+
   return (
     <div className="px-10">
       <div className="pb-4">
